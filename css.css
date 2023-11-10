@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(27, 66%, 92%);
+}
+.balance {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(10, 79%, 65%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.wh700 {
+  font-weight: 700;
+}
+.wh400 {
+  font-weight: 400;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Spending {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  -ms-border-radius: 10;
+  -o-border-radius: 10;
+}
+.Spending h1 {
+  color: hsl(25, 47%, 15%);
+}
+.days {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  border-bottom: 1px solid hsl(27, 66%, 92%);
+  padding-bottom: 30px;
+}
+.days div {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.days span {
+  display: block;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: hsl(10, 79%, 65%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.days span:hover {
+  opacity: 0.5;
+}
+.days p {
+  color: hsl(28, 10%, 53%);
+}
+.Total {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.gray {
+  font-size: 15px;
+  color: hsl(28, 10%, 53%);
+}
+.Total h2 {
+  font-size: 30px;
+  color: hsl(25, 47%, 15%);
+}
+.Total span {
+  color: hsl(25, 47%, 15%);
+  display: block;
+  text-align: end;
+  font-weight: 800;
+}
+.Total > p {
+  font-size: 15px;
+  color: hsl(28, 10%, 53%);
+}
+
+.one {
+  transition: 0.3s;
+  opacity: 0;
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 1px 5px;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  bottom: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.days > div:hover .one {
+  opacity: 1;
+}
+@media screen and (max-width: 700px) {
+  main {
+    width: 95%;
+  }
+  .days {
+    gap: 0;
+  }
+  .days > div {
+    width: calc(100% / 7);
+  }
+  .Spending > h1 {
+    font-size: 25px;
+  }
+}
